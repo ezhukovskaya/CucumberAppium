@@ -28,6 +28,10 @@ public class ApplicationDriver {
         new WebDriverWait(getDriver(), 30).until(ExpectedConditions.textToBePresentInElementLocated(element.getElementLocator(), text));
     }
 
+    public static void waitUntilElementPresents(BaseAndroidElement element) {
+        new WebDriverWait(getDriver(), 30).until(ExpectedConditions.presenceOfElementLocated(element.getElementLocator()));
+    }
+
     public static void installApk(String apkPath) {
         getDriver().installApp(apkPath);
     }

@@ -11,11 +11,12 @@ public class SecretClosetStartSteps {
         secretClosetStartScreen.selectCity();
     }
 
-    public static String getProductBrand(){
+    public static String getProductBrand() {
         return secretClosetStartScreen.getProductBrand();
     }
 
     public static void openProductWithDiscount() {
+        ApplicationDriver.waitUntilElementPresents(SecretClosetStartScreen.secretClosetScreenNameLabel);
         secretClosetStartScreen.goToProductWithDiscountScreen();
     }
 
