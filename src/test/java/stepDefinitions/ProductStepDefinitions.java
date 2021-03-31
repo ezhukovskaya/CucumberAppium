@@ -12,6 +12,6 @@ public class ProductStepDefinitions extends CucumberSteps {
 
     @Then("I confirm Product name")
     public void iConfirmProductName() {
-        ProductSteps.verifyBrand(productBrandName);
+        ProductSteps.verifyBrand(getProductBrandName());
     }
 }

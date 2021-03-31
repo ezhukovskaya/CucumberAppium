@@ -1,6 +1,5 @@
 package framework.base;
 
-import framework.capabilities.ApplicationDriver;
 import org.testng.Assert;
 
 import java.lang.reflect.InvocationTargetException;

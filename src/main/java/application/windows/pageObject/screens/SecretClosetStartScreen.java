@@ -1,6 +1,7 @@
 package application.windows.pageObject.screens;
 
 import framework.base.BaseScreen;
+import framework.capabilities.ApplicationDriver;
 import framework.elements.Button;
 import framework.elements.Label;
 import org.openqa.selenium.By;
@@ -14,6 +15,7 @@ public class SecretClosetStartScreen extends BaseScreen {
 
     public SecretClosetStartScreen() {
         super(secretClosetScreenNameLabel);
+        ApplicationDriver.waitUntilTextNotPresents(selectCityButton, "--");
     }
 
     public String getProductBrand() {

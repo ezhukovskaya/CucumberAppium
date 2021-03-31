@@ -1,5 +1,13 @@
 package stepDefinitions;
 
 public class CucumberSteps {
-    protected String productBrandName;
+    private String productBrandName;
+
+    public String getProductBrandName(){
+        return productBrandName;
+    }
+
+    public void setProductBrandName(String productBrandName){
+        this.productBrandName = productBrandName;
+    }
 }

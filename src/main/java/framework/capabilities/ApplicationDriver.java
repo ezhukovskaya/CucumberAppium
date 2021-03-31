@@ -24,6 +24,10 @@ public class ApplicationDriver {
         getDriver();
     }
 
+    public static void waitUntilTextNotPresents(BaseAndroidElement element, String text) {
+        new WebDriverWait(getDriver(), 30).until(ExpectedConditions.invisibilityOfElementWithText(element.getElementLocator(), text));
+    }
+
     public static void waitUntilTextPresents(BaseAndroidElement element, String text) {
         new WebDriverWait(getDriver(), 30).until(ExpectedConditions.textToBePresentInElementLocated(element.getElementLocator(), text));
     }

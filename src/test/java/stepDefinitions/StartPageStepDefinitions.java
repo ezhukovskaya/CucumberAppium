@@ -8,9 +8,9 @@ import io.cucumber.java.en.Then;
 import steps.SecretClosetStartSteps;
 
 public class StartPageStepDefinitions extends CucumberSteps {
-    @Given("I am on Select City screen")
-    public void iOpenSelectCityScreen() {
-        SecretClosetStartSteps.selectCity();
+    @And("The city is {string}")
+    public void theCityIs(String city) {
+        SecretClosetStartSteps.verifyCity(city);
     }
 
     @Given("I am on Start screen")
@@ -18,18 +18,18 @@ public class StartPageStepDefinitions extends CucumberSteps {
         BaseSteps.verifyIsDisplayed(SecretClosetStartScreen.class);
     }
 
+    @Then("I go to Select City screen")
+    public void iGoToSelectCityScreen() {
+        SecretClosetStartSteps.selectCity();
+    }
+
     @Then("I get Product brand name")
     public void iGetProductBrandName() {
-        productBrandName = SecretClosetStartSteps.getProductBrand();
+        setProductBrandName(SecretClosetStartSteps.getProductBrand());
     }
 
     @And("I go to Product screen")
     public void iGoToProductScreen() {
         SecretClosetStartSteps.openProductWithDiscount();
-    }
-
-    @And("The city is {string}")
-    public void theCityIs(String city) {
-        SecretClosetStartSteps.verifyCity(city);
     }
 }
